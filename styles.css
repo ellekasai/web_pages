@@ -2,33 +2,40 @@
 body {
 	width: 990px;
 	margin: 0 auto;
-	background-color: rgba(212, 212, 212, 0.69);
-	
+	padding: 0 20px;
+	background-color: #F0FFF0;
 }
 
 h1 {
-	width: 300px;
-	margin: 20px auto;
-	border: #000 solid 1px;
-	border-radius: 50%;
+	background-image: url("images/header_image.jpg");
 	text-align: center;
+	padding-top: 20px;
+	height: 70px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 40px;
+	letter-spacing: 10px;
+	font-weight: bold;
 }
 
+nav {
+	margin: 20px 0;
+}
 nav ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	background-color: #f1f1f1;
+	background-color: #000;
 	text-align: center;
 }
 
 nav li {
 	display: inline-block;
+	font-size: 20px;
 }
 
 nav a {
 	display: block;
-	color: #000;
+	color: #fff;
     padding: 8px 16px 8px 16px;
     text-decoration: none; 
 }
@@ -38,18 +45,90 @@ nav li a:hover {
     color: white;
 }
 
-img {
+.image span {
+	position: absolute;
+	margin-top: 20px;
+	padding: 0 10px;
+	z-index: 1;	
+	color: white; 
+    font: bold 24px/45px Helvetica, Sans-Serif; 
+    letter-spacing: -1px;  
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.image img {
+	position: relative;
 	float: left;
-
+	width: 400px;
+	height: 300px;
 }
 
-aside ul {
-	margin: 0;
+.side h3, .side p {
 	padding: 0;
-
+	margin: 0;
+}
+.side {
+	display: block;
+	width: 500px;
+	margin-left: 440px;
+}
+.side ul {
+	
+	padding: 0;
+	margin: 0;
 }
 
-main {
+.side p {
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 14px;
+	margin-bottom: 20px;
+	margin-top: 5px;
+}
+
+.side h3 {
+	font-family: 'Poiret One', cursive;
+	color: #000080;
+}
+
+.main {
 	clear: both;
+	padding-top: 20px;
 	
+}
+
+.main h2, .main p {
+	padding: 0;
+	margin: 0;
+	text-align: justify;
+}
+
+.main h2 {
+	font-family: 'Poiret One', cursive;
+	color: #000080;
+}
+
+.main p {
+	color: #333333;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 14px;
+	margin-bottom: 20px;
+	margin-top: 5px;
+}
+
+/* Button Changing section */
+
+.btn { position: relative; }
+.content { position: absolute; }
+
+.top { top: 0;}
+.btn:hover .top { top: -39px;}
+
+.bottom {top: 39px; }
+.btn:hover .bottom {top: 0;}
+
+.content {
+	position: relative;
+
+	transition: top 0.3s;
+	overflow: hidden;
 }
